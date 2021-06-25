@@ -1,14 +1,15 @@
 module.exports = {
+  pathPrefix: "list-of-accepted-surveys",
   siteMetadata: {
-    siteTitle: `Rocket Docs`,
-    defaultTitle: `Rocket Docs`,
-    siteTitleShort: `Rocket Docs`,
-    siteDescription: `Out of the box Gatsby Theme for creating documentation websites easily and quickly`,
-    siteUrl: `https://rocketdocs.netlify.app`,
+    siteTitle: `受付中のアンケート一覧`,
+    defaultTitle: `受付中のアンケート一覧`,
+    siteTitleShort: `受付中のアンケート一覧`,
+    siteDescription: `FS の ITS メンバ向け受付中アンケートの一覧です`,
+    siteUrl: `https://fs5013-furi-sutao.github.io/list-of-accepted-surveys/`,
     siteAuthor: `@rocketseat`,
-    siteImage: `/banner.png`,
-    siteLanguage: `en`,
-    themeColor: `#8257E6`,
+    siteImage: `/banner.svg`,
+    siteLanguage: `ja`,
+    themeColor: `#007fff`,
     basePath: `/`,
   },
   flags: { PRESERVE_WEBPACK_CACHE: true },
@@ -18,8 +19,8 @@ module.exports = {
       options: {
         configPath: `src/config`,
         docsPath: `src/docs`,
-        repositoryUrl: `https://github.com/rocketseat/gatsby-themes`,
-        baseDir: `examples/gatsby-theme-docs`,
+        repositoryUrl: `https://fs5013-furi-sutao.github.io/list-of-accepted-surveys`,
+        baseDir: `list-of-accepted-surveys`,
       },
     },
     {
@@ -34,19 +35,21 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`,
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: `YOUR_ANALYTICS_ID`,
-    //   },
-    // },
     `gatsby-plugin-remove-trailing-slashes`,
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://rocketdocs.netlify.app`,
+        siteUrl: `https://fs5013-furi-sutao.github.io/list-of-accepted-surveys/`,
       },
     },
     `gatsby-plugin-offline`,
+    {
+      resolve: '@mkitio/gatsby-theme-password-protect',
+      options: {
+        password: 'time4action', // delete or `undefined` to disable password protection
+        partialMatching: true,
+        pagePaths: ['/list-of-accepted-surveys']
+      }
+    }
   ],
 };
