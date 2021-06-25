@@ -20,7 +20,7 @@ module.exports = {
         configPath: `src/config`,
         docsPath: `src/docs`,
         repositoryUrl: `https://fs5013-furi-sutao.github.io/list-of-accepted-surveys`,
-        baseDir: `list-of-accepted-surveys`,
+        baseDir: `examples/gatsby-theme-docs`,
       },
     },
     {

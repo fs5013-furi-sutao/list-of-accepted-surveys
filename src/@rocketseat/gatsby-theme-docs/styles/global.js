@@ -114,13 +114,6 @@ export default function GlobalStyle() {
             border-bottom: none;
           }
         }
-        
-        span.anti-spam::before {
-          color: ${theme.colors.primary};
-          
-          alpha {
-            content: "@";
-        }
 
         blockquote {
           margin-bottom: 16px;
